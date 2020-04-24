@@ -3,11 +3,11 @@
   height: 95vh;
   /* add gradient on top of background image - can specify direction in which gradient changes*/
   background-image: linear-gradient(
-      to right bottom,
-      $color-primary-purple,
-      $color-primary-light-blue
+      to bottom,
+      $color-primary-dark-blue,
+      $color-grey-dark-3
     ),
-    url(../img/hero.jpg);
+    url(../img/toronto.jpg);
   /* try to fit element inside viewport */
   background-size: cover;
   /* make image stay at the top of image as viewport changes  */
