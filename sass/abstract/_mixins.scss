@@ -28,3 +28,10 @@
     } //1800
   }
 }
+// reusable code for centering
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

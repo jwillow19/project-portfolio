@@ -3,15 +3,18 @@
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 52rem;
+  // modifies the space between rows
+  height: 33rem;
 
   &__side {
-    height: 52rem;
+    // modifies height of card
+    height: 40rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    // height: 80%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
@@ -62,7 +65,7 @@
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 23rem;
+    height: 15rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
@@ -104,7 +107,7 @@
     text-align: right;
     color: $color-white;
     position: absolute;
-    top: 12rem;
+    top: 8rem;
     right: 2rem;
     width: 75%;
   }

@@ -26,6 +26,8 @@
 }
 
 .btn-text {
+  background-color: red($color: #000000);
+  color: $color-black;
   &:link,
   &:visited {
     font-size: $default-font-size;

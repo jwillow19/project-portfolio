@@ -4,16 +4,23 @@
   margin-top: -20vh;
 }
 
+// linear-gradient(
+//   //     to right bottom,
+//   //     $color-primary-purple,
+//   //     $color-primary-light-blue
+//   //   ),
+
 .section-features {
   padding: 20rem 0;
   background-image: linear-gradient(
-      to right bottom,
+      to bottom,
       $color-primary-purple,
-      $color-primary-light-blue
+      $color-primary-dark-blue
     ),
-    url(../img/hero.jpg);
+    url(../img/wall.jpg);
   // transform: skewY(-7deg);
   background-size: cover;
+  background-position: center;
   margin-top: -10rem;
   // & > * {
   //   transform: skewY(7deg);
