@@ -9,36 +9,78 @@
     transition: all 0.2s;
     outline-offset: 0.5rem;
 
+    @include respond(tab-port) {
+      float: left;
+      position: relative;
+      width: 33.33333333%;
+      box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    }
+
     &__p1 {
       left: 10%;
       top: -2rem;
+      @include respond(tab-port) {
+        top: 0;
+        left: 0;
+        transform: scale(0.8);
+      }
     }
 
     &__p2 {
       left: 28%;
       top: 10rem;
+      @include respond(tab-port) {
+        top: 16rem;
+        left: -35%;
+        transform: scale(0.8);
+      }
     }
 
     &__p3 {
       right: 25%;
       top: 5rem;
+      @include respond(tab-port) {
+        top: 27rem;
+        right: 10%;
+        transform: scale(0.8);
+      }
     }
 
     &__p4 {
       right: 0;
       // top: -2rem;
+      @include respond(tab-port) {
+        top: 1rem;
+        right: -80%;
+        transform: scale(0.8);
+      }
     }
     &__p5 {
       left: 5%;
       top: 15rem;
+      @include respond(tab-port) {
+        top: -15rem;
+        left: 0%;
+        transform: scale(0.7);
+      }
     }
     &__p6 {
       right: 9%;
       top: 16rem;
+      @include respond(tab-port) {
+        top: 0;
+        right: 28%;
+        transform: scale(0.8);
+      }
     }
     &__p7 {
       left: 35%;
       top: 22rem;
+      @include respond(tab-port) {
+        top: -2.5rem;
+        left: 15%;
+        transform: scale(0.8);
+      }
     }
 
     &:hover {

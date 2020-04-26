@@ -39,6 +39,9 @@ body {
     animation-duration: 2s;
 
     text-transform: none;
+    @include respond(phone) {
+      letter-spacing: 0.5rem;
+    }
   }
 }
 
@@ -79,4 +82,9 @@ body {
   &:not(:last-child) {
     margin-bottom: 3rem;
   }
+}
+
+.card-description {
+  font-size: 18px;
+  font-weight: 500;
 }

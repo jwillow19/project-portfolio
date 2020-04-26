@@ -17,6 +17,22 @@
   /* this is the reference origin for logo-box */
   position: relative;
 
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+    only screen and (min-width: 125em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark-blue, 0.8),
+        rgba($color-grey-dark-3, 0.8)
+      ),
+      url(../img/toronto.jpg);
+  }
+
+  // @include respond(phone) {
+  //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  //   clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  // }
+
   .logo-box {
     position: absolute;
     top: 40px;

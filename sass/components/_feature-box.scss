@@ -9,6 +9,10 @@
   animation-name: moveInTop;
   animation-duration: 2s;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   &_down {
     animation-name: moveInTop;
     // animation-duration: 2s;

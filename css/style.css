@@ -1,3 +1,10 @@
+/*
+0-600px:        phone
+600-900px:      tablet portrait
+900-1200px:     tablet landscape
+1200-1800px:    desktop (normal styles)
+1800+           big desktop
+*/
 @keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -30,10 +37,22 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 /*  always specify fonts in body for inheritance */
 body {
   box-sizing: border-box; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Lato', sans-serif;
@@ -71,6 +90,9 @@ body {
     animation-name: fadeIn;
     animation-duration: 2s;
     text-transform: none; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary-sub {
+        letter-spacing: 0.5rem; } }
 
 .heading-secondary {
   font-size: 3.5rem;
@@ -95,17 +117,33 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.card-description {
+  font-size: 18px;
+  font-weight: 500; }
+
 .u-center-text {
-  text-align: center; }
+  text-align: center !important; }
 
 .u-margin-bottom-small {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem !important; }
 
 .u-margin-bottom-medium {
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
 
 .u-margin-bottom-big {
-  margin-bottom: 8rem; }
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
 
 .btn {
   /* Button - pseudo class (state of selector)*/
@@ -151,26 +189,67 @@ body {
     position: absolute;
     transition: all 0.2s;
     outline-offset: 0.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .composition__photo {
+        float: left;
+        position: relative;
+        width: 33.33333333%;
+        box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.2); } }
     .composition__photo__p1 {
       left: 10%;
       top: -2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p1 {
+          top: 0;
+          left: 0;
+          transform: scale(0.8); } }
     .composition__photo__p2 {
       left: 28%;
       top: 10rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p2 {
+          top: 16rem;
+          left: -35%;
+          transform: scale(0.8); } }
     .composition__photo__p3 {
       right: 25%;
       top: 5rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p3 {
+          top: 27rem;
+          right: 10%;
+          transform: scale(0.8); } }
     .composition__photo__p4 {
       right: 0; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p4 {
+          top: 1rem;
+          right: -80%;
+          transform: scale(0.8); } }
     .composition__photo__p5 {
       left: 5%;
       top: 15rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p5 {
+          top: -15rem;
+          left: 0%;
+          transform: scale(0.7); } }
     .composition__photo__p6 {
       right: 9%;
       top: 16rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p6 {
+          top: 0;
+          right: 28%;
+          transform: scale(0.8); } }
     .composition__photo__p7 {
       left: 35%;
       top: 22rem; }
+      @media only screen and (max-width: 56.25em) {
+        .composition__photo__p7 {
+          top: -2.5rem;
+          left: 15%;
+          transform: scale(0.8); } }
     .composition__photo:hover {
       transform: scale(1.2); }
 
@@ -184,6 +263,9 @@ body {
   transition: transform 0.3s;
   animation-name: moveInTop;
   animation-duration: 2s; }
+  @media only screen and (max-width: 56.25em) {
+    .feature-box {
+      padding: 2rem; } }
   .feature-box_down {
     animation-name: moveInTop; }
   .feature-box_up {
@@ -348,7 +430,9 @@ body {
     transition: all 0.5s 0.2s; }
   .popup__left {
     width: 33.333333%;
-    display: table-cell; }
+    display: table-cell;
+    padding: 3rem 5rem;
+    vertical-align: middle; }
   .popup__right {
     width: 66.6666667%;
     display: table-cell;
@@ -359,17 +443,7 @@ body {
     width: 100%; }
   .popup__text {
     font-size: 1.4rem;
-    margin-bottom: 4rem;
-    -moz-column-count: 2;
-    -moz-column-gap: 4rem;
-    -moz-column-rule: 1px solid #999;
-    column-count: 2;
-    column-gap: 4rem;
-    column-rule: 1px solid #999;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto; }
+    margin-bottom: 4rem; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -395,6 +469,13 @@ body {
   background-color: 0; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
+    @media only screen and (max-width: 56.25em) {
+      .row:not(:last-child) {
+        margin-bottom: 6rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row::after {
     content: '';
     display: table;
@@ -403,6 +484,13 @@ body {
     float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^='col-']:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .row [class^='col-'] {
+        width: 100% !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -453,6 +541,9 @@ body {
   /* coordinates of polygon clip shape */
   /* this is the reference origin for logo-box */
   position: relative; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(58, 77, 147, 0.8), rgba(51, 51, 51, 0.8)), url(../img/toronto.jpg); } }
   .header .logo-box {
     position: absolute;
     top: 40px;
