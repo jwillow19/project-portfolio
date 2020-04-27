@@ -8,7 +8,8 @@
 
   &__side {
     // modifies height of card
-    height: 40rem;
+    font-size: 2rem;
+    height: 30rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
@@ -24,23 +25,23 @@
     &--front {
       background-color: $color-white;
     }
-
+    // CARD BACK COLORS
     &--back {
       transform: rotateY(180deg);
 
       &-1 {
         background-image: linear-gradient(
           to right bottom,
-          $color-primary-light-blue,
-          $color-primary-purple
+          $color-grey-dark-2,
+          $color-grey-dark
         );
       }
 
       &-2 {
         background-image: linear-gradient(
           to right bottom,
-          $color-primary-light-blue,
-          $color-primary-purple
+          $olor-orange-light,
+          $olor-orange
         );
       }
 
@@ -48,7 +49,21 @@
         background-image: linear-gradient(
           to right bottom,
           $color-primary-light-blue,
-          $color-primary-purple
+          $color-primary-light-pink
+        );
+      }
+      &-4 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-primary-dark-blue,
+          $color-primary-light-pink
+        );
+      }
+      &-6 {
+        background-image: linear-gradient(
+          to right bottom,
+          $olor-orange-light,
+          $olor-orange-dark
         );
       }
     }
@@ -65,38 +80,59 @@
   // FRONT SIDE STYLING
   &__picture {
     background-size: cover;
-    height: 15rem;
+    // Height of picture in card
+    height: 11rem;
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
+    // FRONT CARD IMAGE
     &--1 {
       background-image: linear-gradient(
           to right bottom,
-          $color-primary-light-blue,
-          $color-primary-purple
+          $color-grey-dark,
+          $color-black
         ),
-        url(../img/nat-5.jpg);
+        url(../img/incognito.png);
+      background-size: cover;
+      background-position: left;
     }
 
     &--2 {
-      background-image: linear-gradient(
-          to right bottom,
-          $color-primary-light-blue,
-          $color-primary-purple
-        ),
-        url(../img/nat-6.jpg);
+      background-image: url(../img/foodfindr.jpg);
+      background-size: cover;
+      background-position: left;
     }
 
     &--3 {
+      background-image: url(../img/shopping_app.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &--4 {
+      background-image: linear-gradient(
+          to right bottom,
+          $color-grey-dark,
+          $color-black
+        ),
+        url(../img/datathon.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    &--5 {
       background-image: linear-gradient(
           to right bottom,
           $color-primary-light-blue,
           $color-primary-purple
         ),
         url(../img/nat-7.jpg);
+    }
+    &--6 {
+      background-image: url(../img/pose-est.png);
+      background-size: cover;
+      background-position: center;
     }
   }
 
@@ -107,11 +143,11 @@
     text-align: right;
     color: $color-white;
     position: absolute;
-    top: 8rem;
+    top: 2rem;
     right: 2rem;
     width: 75%;
   }
-
+  // HEADING COLOR
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
@@ -140,20 +176,49 @@
         rgba($color-primary-purple, 0.85)
       );
     }
+    &--4 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light-blue, 0.85),
+        rgba($color-primary-purple, 0.85)
+      );
+    }
+    &--5 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light-blue, 0.85),
+        rgba($color-primary-purple, 0.85)
+      );
+    }
+    &--6 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light-blue, 0.85),
+        rgba($color-primary-purple, 0.85)
+      );
+    }
   }
 
   &__details {
-    padding: 3rem;
+    padding: 1rem 3rem;
+    color: $color-grey-dark;
 
     ul {
       list-style: none;
-      width: 80%;
-      margin: 0 auto;
+      display: block;
+      // width: 80%;
+      // margin: 0 auto;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      padding-inline-start: 40px;
 
       li {
         text-align: center;
         font-size: 1.5rem;
-        padding: 1rem;
+        padding: 0.5rem;
+        display: list-item;
 
         &:not(:last-child) {
           border-bottom: 1px solid $color-grey-light-1;

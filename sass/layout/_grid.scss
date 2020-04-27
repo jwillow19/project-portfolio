@@ -32,6 +32,11 @@
     }
   }
 
+  // &-small {
+  //   max-width: 95rem;
+  //   margin: 0 auto;
+  // }
+
   .col-1-of-2 {
     width: calc((100% - #{$gutter-horizontal}) / 2);
   }
