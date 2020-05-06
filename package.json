@@ -4,11 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "delpoy": "gh-pages -d dist"
   },
   "author": "jwillow",
+  "homepage": "https://jwillow19.github.io/jeff-won-portfolio",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.14.0"
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
