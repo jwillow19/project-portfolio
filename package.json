@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "delpoy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "author": "jwillow",
-  "homepage": "https://jwillow19.github.io/jeff-won-portfolio",
+  "homepage": "https://jwillow19.github.io/project-portfolio",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.14.1"
